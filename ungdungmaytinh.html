@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="num1">
+    <input type="number" id="num2"><br>
+    <button onclick="Add()">Cộng</button>
+    <button onclick="Minus()">Trừ</button>
+    <button onclick="Multiplication()">Nhân</button>
+    <button onclick="Division()">Chia</button>
+    <h2>Result:</h2>
+    <p id="result"></p>
+    <script>
+        let number1= document.getElementById("num1").value;
+        let number2= document.getElementById("num2").value;
+        let result=0;
+        function Add(){
+            let result= number1 + number2;
+            document.getElementById("result").innerHTML= result;
+        }
+        function Minus(){
+            let result= number1 - number2;
+            document.getElementById("result").innerHTML= result;
+        }
+        function Multiplication(){
+            let result= number1 * number2;
+            document.getElementById("result").innerHTML= result;
+        }
+        function Division(){
+            let result= number1 / number2;
+            document.getElementById("result").innerHTML= result;
+        }
+    </script>
+</body>
+</html>
