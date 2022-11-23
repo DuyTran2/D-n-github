@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="foot">Nhập số foot</label>
+    <input type=" number" id="foot"><br>
+    <p id="result1">Số met là:</p><br>
+    <button onclick="foottomet()">Convert to met</button><br>
+    <label for="met">Nhập số met</label>
+    <input type="number" name="" id="met">
+    <p id="result2">Số foot là:</p><br>
+    <button onclick="mettofoot">Convert to foot</button>
+    <script>
+        function foottomet(){
+            let foot= document.getElementById("foot").value;
+            foot= parseFloat(foot);
+            let meter= foot * 0.305;
+            
+            document.getElementById("result1").innerHTML= meter+"met";
+        }
+        function mettofoot(){
+            let met= document.getElementById("met").value;
+            met = parseFloat(met);
+            let foot= met * 3.297;
+         
+            document.getElementById("result2").innerHTML= foot + "foot";
+        }
+    </script>
+</body>
+</html>
